@@ -64,8 +64,7 @@ func TakeInputes(info string) (op float64, err error) {
 	fmt.Scan(&op)
 
 	if op <= 0 {
-		err = errors.New("Invalid input is provided. Please enter non-negative/non-zero value.")
-		return 0, err
+		return 0, errors.New("Invalid input is provided! Please enter non-negative/non-zero value")
 	}
 
 	return op, nil
